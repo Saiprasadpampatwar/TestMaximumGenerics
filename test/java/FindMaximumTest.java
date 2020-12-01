@@ -3,23 +3,25 @@ import org.junit.Test;
 
 public class FindMaximumTest {
     @Test
-    public void givenMaxAtFirstPosition_shouldReturnSame() {
+    public void givenMaxIntAtFirstPosition_shouldReturnSame() {
 
         Integer result = FindMaximum.findMaximumInteger(15,2,13);
-        Assert.assertSame(15,result);
+        Assert.assertEquals((Integer) 15,result);
     }
 
     @Test
-    public void givenMaxAtSecondPosition_shouldReturnSame() {
+    public void givenMaxIntAtSecondPosition_shouldReturnSame() {
 
         Integer result = FindMaximum.findMaximumInteger(2,15,13);
-        Assert.assertSame(15,result);
+        Assert.assertEquals((Integer) 15,result);
     }
 
     @Test
-    public void givenMaxAtThirdPosition_shouldReturnSame() {
+    public void givenMaxIntAtThirdPosition_shouldReturnSame() {
 
         Integer result = FindMaximum.findMaximumInteger(15,12,20);
-        Assert.assertSame(20,result);
+        Assert.assertSame((Integer) 20,result);
     }
+
+
 }
