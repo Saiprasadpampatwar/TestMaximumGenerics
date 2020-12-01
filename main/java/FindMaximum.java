@@ -1,4 +1,14 @@
-public class FindMaximum {
+public class FindMaximum <T extends Comparable<T>>{
+
+    T firstValue;
+    T secondValue;
+    T thirdValue;
+
+    public FindMaximum(T firstValue, T secondValue, T thirdValue) {
+        this.firstValue = firstValue;
+        this.secondValue = secondValue;
+        this.thirdValue = thirdValue;
+    }
 
     public static Integer findMaximumInteger(Integer firstValue, Integer secondValue, Integer thirdValue){
         Integer maxValue = firstValue;
@@ -40,6 +50,10 @@ public class FindMaximum {
         if (third.compareTo(maximumValue) > 0)
             maximumValue = third;
         return maximumValue;
+    }
+
+    public T findMaxValueAtAnyPosition() {
+        return FindMaximum.maximumOfObject(firstValue, secondValue, thirdValue);
     }
 
 }

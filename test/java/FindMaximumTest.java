@@ -84,4 +84,22 @@ public class FindMaximumTest {
         Assert.assertEquals((String) "Sai", maximumObject);
     }
 
+    @Test
+    public void givenGenericInteger() {
+        Integer maxValueInteger = new FindMaximum<Integer>(6, 7, 8).findMaxValueAtAnyPosition();
+        Assert.assertEquals((Integer) 8, maxValueInteger);
+    }
+
+    @Test
+    public void givenGenericFloat() {
+        Float maxValueFloat = new FindMaximum<Float>(6.9f, 9.9f, 8.0f).findMaxValueAtAnyPosition();
+        Assert.assertEquals((Float) 9.9f, maxValueFloat);
+    }
+
+    @Test
+    public void givenGenericString() {
+        String maxValueString = new FindMaximum<String>("Yahoo", "Google", "Microsoft").findMaxValueAtAnyPosition();
+        Assert.assertEquals((String) "Yahoo", maxValueString);
+    }
+
 }
