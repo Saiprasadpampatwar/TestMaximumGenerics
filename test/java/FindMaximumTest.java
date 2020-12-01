@@ -64,4 +64,24 @@ public class FindMaximumTest {
         String result = FindMaximum.findMaximumString("Banana","Apple","Peach");
         Assert.assertEquals((String)"Peach" ,result);
     }
+
+
+    @Test
+    public void maximumObjectInteger() {
+        Integer maximumObject = FindMaximum.maximumOfObject(240, 250, 220);
+        Assert.assertEquals((Integer) 250, maximumObject);
+    }
+
+    @Test
+    public void maximumObjectFloat() {
+        Float maximumObject = FindMaximum.maximumOfObject(9.999f, 10.001f, 10.0f);
+        Assert.assertEquals((Float) 10.001f, maximumObject);
+    }
+
+    @Test
+    public void maximumObjectString() {
+        String maximumObject = FindMaximum.maximumOfObject("Sai", "Chetan", "Murli");
+        Assert.assertEquals((String) "Sai", maximumObject);
+    }
+
 }
