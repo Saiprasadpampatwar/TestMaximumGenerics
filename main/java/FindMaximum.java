@@ -1,3 +1,8 @@
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
+
 public class FindMaximum <T extends Comparable<T>>{
 
     T firstValue;
@@ -56,4 +61,11 @@ public class FindMaximum <T extends Comparable<T>>{
         return FindMaximum.maximumOfObject(firstValue, secondValue, thirdValue);
     }
 
-}
+    public static <T extends Comparable<T>> T maximumOfObjects(T... values) {
+       List<T> list = Arrays.asList(values);
+        Collections.sort(list);
+        T maxValue = list.get(list.size()-1);
+        return maxValue;
+    }
+
+    }

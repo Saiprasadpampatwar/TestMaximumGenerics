@@ -2,6 +2,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class FindMaximumTest {
+
     @Test
     public void givenMaxIntAtFirstPosition_shouldReturnSame() {
 
@@ -102,4 +103,24 @@ public class FindMaximumTest {
         Assert.assertEquals((String) "Yahoo", maxValueString);
     }
 
+    @Test
+    public void multipleIntegerArgs() {
+        Integer result = FindMaximum.maximumOfObjects(6, 7, 8,9,10);
+        Assert.assertEquals((Integer) 10,result);
+
+    }
+
+    @Test
+    public void multipleFloatIntegerArgs() {
+        Float result = FindMaximum.maximumOfObjects(6.9f, 9.9f, 8.0f,11.1f,15.69f);
+        Assert.assertEquals((Float) 15.69f,result);
+
+    }
+
+    @Test
+    public void multipleStringIntegerArgs() {
+        String result = FindMaximum.maximumOfObjects("Sai","Pranav","Zebra","Chetan");
+        Assert.assertEquals((String) "Zebra",result);
+
+    }
 }
